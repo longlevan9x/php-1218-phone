@@ -4,10 +4,10 @@
 <section class="grid-holder features-books">
     @forelse($phones as $phone)
     <figure class="span4 slide first chinh1" style="position: relative;">
-        <a href="#"><img src="{{asset('storage/phone/' . $phone->image)}}" alt="" class="pro-img"/></a>
+        <a href="{{url('detail/' . str_slug($phone->name) . "-" . $phone->id)}}"><img src="{{asset('storage/phone/' . $phone->image)}}" alt="" class="pro-img"/></a>
         <p>
             <span class="title">
-                <a href="" style="font-weight: bold">{{$phone->name}}</a>
+                <a href="{{url('detail/' . str_slug($phone->name) . "-" . $phone->id)}}" style="font-weight: bold">{{$phone->name}}</a>
             </span>
         </p>
         <p>Loại điện thoại:
@@ -33,11 +33,11 @@
         </div>
     </figure>
     @empty
-    
+
     @endforelse
 </section>
 <div style="clear: both;"></div>
 <section class="grid-holder features-books">
-    noi nay de phan trang
+    {{$phones->links()}}
 </section>
 @endsection

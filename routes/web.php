@@ -16,6 +16,7 @@
 // });
 
 Route::get('/', "\App\Http\Controllers\HomeController@index");
+Route::get('/detail/{slug}', "\App\Http\Controllers\HomeController@detail");
 
 Route::prefix('admin')->group(function() {
 	Route::get("home", "\App\Http\Controllers\Admin\HomeController@index");
