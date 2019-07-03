@@ -26,4 +26,13 @@ class HomeController extends Controller
         $phones = Phone::query()->paginate(2);
         return view('home.home', ['phones' => $phones]);
     }
+
+    public function detail($slug)
+    {
+        $slug_arr = explode("-", $slug);
+        $id = end($slug_arr);
+        $related = Phone::query()->limit(8)->get();
+        $phone = Phone::findOrFail($id);
+        return view('home.detail', ['phone' => $phone, "related" => $related]);
+    }
 }
