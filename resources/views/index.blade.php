@@ -22,14 +22,14 @@
     <script src="{{asset('asset_admin/js/jquery.zoom.js')}}"></script>
     <script type="text/javascript" src="{{asset('asset_admin/js/bookblock.js')}}"></script>
     <script type="text/javascript" src="{{asset('asset_admin/js/custom.js')}}"></script>
-    <script type="text/javascript" src="{{asset('asset_admin/social.js')}}js/"></script>
+    {{-- <script type="text/javascript" src="{{asset('asset_admin/social.js')}}js/"></script> --}}
     <script src="{{asset('asset_admin/js/formValidation.min1.js')}}" type="text/javascript"></script>
     <script src="{{asset('asset_admin/js/formValidation.min2.js')}}" type="text/javascript"></script>
     <script src="{{asset('asset_admin/js/index1.js')}}" type="text/javascript"></script>
-    <script src="{{asset('asset_admin/js/jquery.bpopup.min.js')}}" type="text/javascript"></script>
+    {{-- <script src="{{asset('asset_admin/js/jquery.bpopup.min.js')}}" type="text/javascript"></script> --}}
     <script type="text/javascript">
     $(document).ready(function() {
-        $('.social_active').hoverdir( {} );
+        // $('.social_active').hoverdir( {} );
         $('#ex1').zoom();
     });
     </script>

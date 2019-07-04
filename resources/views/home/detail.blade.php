@@ -20,7 +20,9 @@
                     {{-- <p class="text_chi_tiet">Số trang: 300 trang</p> --}}
                     <div class="comm-nav">
                         <strong class="title2">Số lượng mua</strong>
-                        <ul><form method="POST" action="">
+                        <ul><form method="POST" action="{{url("cart/add")}}">
+                            @csrf
+                            <input type="hidden" name="id" value="{{$phone->id}}">
                                 <li><input name="txtSoLuong" class="txtSoLuong" type="text" value="1" required pattern="[0-9]{1,3}" title="Số lượng phải là số và nhỏ hơn 4 kí tự"/></li>
                             <li><input type="submit" value="Thêm vào giỏ hàng" class="more-btn"/></li>
                             </form>
